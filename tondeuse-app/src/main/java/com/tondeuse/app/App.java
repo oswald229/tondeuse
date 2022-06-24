@@ -10,7 +10,7 @@ import com.tondeuse.app.services.IInstructionsReader;
 import com.tondeuse.app.services.impl.InstructionsReader;
 
 /**
- * Hello world!
+ * Tondeuse app.
  *
  */
 public class App {

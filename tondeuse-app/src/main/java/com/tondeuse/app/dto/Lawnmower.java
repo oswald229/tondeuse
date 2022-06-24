@@ -103,6 +103,11 @@ public class Lawnmower {
 
 	}
 	
+	/**
+	 * Follow the provided itinerary.
+	 *
+	 * @return the lawnmower garden position
+	 */
 	public GardenPosition followItinerary() {
 		for(int i=0; i< this.itinerary.length(); i++) {
 			this.move(String.valueOf(this.itinerary.charAt(i)));
@@ -111,6 +116,11 @@ public class Lawnmower {
 		return this.position;
 	}
 
+	/**
+	 * Rotate the lawnmower.
+	 *
+	 * @param direction the direction
+	 */
 	private void rotate(String direction) {
 		List<String> orientations = Constants.getOrientations();
 		String currentOrientation = this.position.getOrientation();
@@ -136,6 +146,9 @@ public class Lawnmower {
 
 	}
 
+	/**
+	 * Move the lawnmower forward.
+	 */
 	private void moveForward() {
 		if (this.position.getOrientation().equals("N") && this.position.y < this.maxLength) {
 			this.position.y += 1;

@@ -18,13 +18,13 @@ public interface IGarden {
 	 *
 	 * @param instructionFilePath the instruction file path
 	 * @param instructionsReader the instructions reader
-	 * @return the i garden
+	 * @return the garden
 	 * @throws GardenException the garden exception
 	 */
 	IGarden initialize(String instructionFilePath, IInstructionsReader instructionsReader) throws GardenException;
 
 	/**
-	 * Gets the garden the length.
+	 * Gets the garden length.
 	 *
 	 * @return the length
 	 */
@@ -37,8 +37,18 @@ public interface IGarden {
 	 */
 	int getWidth();
 
+	/**
+	 * Gets the lawnmowers.
+	 *
+	 * @return the lawnmowers
+	 */
 	List<Lawnmower> getLawnmowers();
 
+	/**
+	 * Mow the garden.
+	 *
+	 * @return the list of lawnmowers final positions.
+	 */
 	List<GardenPosition> mowGarden();
 
 }
