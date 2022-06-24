@@ -37,13 +37,5 @@ public class GardenPoint extends Point {
 	public int getYCoord() {
 		return (int) super.getY();
 	}
-	
-	public void setX(int x) {
-		this.x = Math.abs(x);
-	}
-	
-	public void setY(int y) {
-		this.y = Math.abs(y);
-	}
 
 }
