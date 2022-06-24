@@ -62,7 +62,8 @@ class LawnmowerTests {
 	@ParameterizedTest
     @CsvSource({
         "0, 0, E, D",
-        "0, 0, W, G"
+        "0, 0, W, G",
+        "0, 1, N, A"        
     })
 	void move_ShouldRotateLawnmowerToExpectedOrientation(int x, int y, String orientation, String action) {
 		
@@ -74,7 +75,6 @@ class LawnmowerTests {
 		assertEquals(expectedPosition.getY(), lawnmower.getPosition().getY());	
 		assertEquals(expectedPosition.getOrientation(), lawnmower.getPosition().getOrientation());
 	}
-
 	
 	@Test
 	void move_ShouldFullyRotateLawnmowerToExpectedOrientation() {
@@ -90,16 +90,7 @@ class LawnmowerTests {
 		assertEquals(expectedPosition.getOrientation(), lawnmower.getPosition().getOrientation());
 	}
 	
-	@Test
-	void move_ShouldMoveLawnmowerToExpectedVerticalPosition() {
-		GardenPosition expectedPosition = new GardenPosition(0,1,"N");
-		// lawnmower is at 0,0 facing North
-		lawnmower.move("A");
-		
-		assertEquals(expectedPosition.getX(), lawnmower.getPosition().getX());
-		assertEquals(expectedPosition.getY(), lawnmower.getPosition().getY());	
-		assertEquals(expectedPosition.getOrientation(), lawnmower.getPosition().getOrientation());
-	}
+
 	
 	@Test
 	void move_ShouldMoveLawnmowerToExpectedHorizontalPosition() {
